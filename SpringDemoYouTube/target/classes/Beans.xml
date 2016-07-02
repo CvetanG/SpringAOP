@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="triangle" class="org.javabrains.Triangle">
+   		<property name="pointA" ref="zeroPoint" />
+   		<property name="pointB">
+			<bean class="org.javabrains.Point">
+				<property name="x" value="-20" />
+				<property name="y" value="0" />
+			</bean>
+   		</property>
+   		
+   		<property name="pointC">
+   			<bean  class="org.javabrains.Point">
+				<property name="x" value="20" />
+				<property name="y" value="0" />
+			</bean>
+   		</property>
+   </bean>
+   
+   <bean id="zeroPoint" class="org.javabrains.Point">
+   		<property name="x" value="0" />
+   		<property name="y" value="0" />
+   </bean>
+   
+   <!--  
+   <bean id="point2" class="org.javabrains.Point">
+   		<property name="x" value="-20" />
+   		<property name="y" value="0" />
+   </bean>
+   
+   <bean id="point3" class="org.javabrains.Point">
+   		<property name="x" value="20" />
+   		<property name="y" value="0" />
+   </bean>
+   -->
+	
+	<alias name="triangle" alias="triangle-alias"/>
+	
+	<!--  
+	<bean class="org.javabrains.DisplayNameBeamPostProcessor" />
+	<bean class="org.javabrains.MyBeanFactoryPP" />
+	-->
+	
+	<bean id="circle" class="org.javabrains.Circle">
+   		<property name="center" ref="zeroPoint" />
+   </bean>
+	
+	
+</beans>
