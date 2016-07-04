@@ -23,7 +23,7 @@ public class JdbcDaoImpl {
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate;
 	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-	private SimplejdbcTemplate simpleJdbcTemplate;
+//	private SimplejdbcTemplate simpleJdbcTemplate;
 	
 	/*public Circle getCircle(int circleId) {
 		
@@ -37,7 +37,8 @@ public class JdbcDaoImpl {
 	public int getCircleCount() {
 		String sql = "SELECT COUNT(*) FROM CIRCLE";
 //		jdbcTemplate.setDataSource(getDataSource());
-		return jdbcTemplate.queryForInt(sql);
+//		return jdbcTemplate.queryForObject(sql);
+		return jdbcTemplate.queryForObject(sql, Integer.class);
 	}
 
 	public String getCircleName(int circleId) {
