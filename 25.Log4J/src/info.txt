@@ -1,0 +1,2 @@
+Sametime if you will check your C:\\ drive then you should find
+your log file log.out with various log messages!
